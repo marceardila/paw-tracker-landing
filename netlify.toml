@@ -1,0 +1,26 @@
+[build]
+  command = "npm run build"
+  publish = "."
+
+[dev]
+  command = "npm run dev"
+  port = 8000
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/paw-tracker-landing.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"

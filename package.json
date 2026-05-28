@@ -1,0 +1,24 @@
+{
+  "name": "paw-tracker-landing",
+  "version": "1.0.0",
+  "description": "Landing page para Paw Tracker - GPS para mascotas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server . -p 8000 -c-1",
+    "build": "echo 'No build needed'",
+    "start": "http-server . -p 3000"
+  },
+  "keywords": [
+    "gps",
+    "mascotas",
+    "perros",
+    "gatos",
+    "rastreo",
+    "localización"
+  ],
+  "author": "Paw Tracker Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
